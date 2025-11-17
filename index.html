@@ -1,1 +1,220 @@
-index file
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DJ Solutions LLC - Professional Bug Bounty & Ethical Hacking Services</title>
+    <meta name="description" content="DJ Solutions LLC | Expert bug bounty hunting and penetration testing services. We find critical vulnerabilities before the bad guys do.">
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap">
+    
+    <style>
+        :root {
+            --primary: #dc2626;     /* red-600 */
+            --primary-dark: #b91c1c;
+            --accent: #0f172a;      /* slate-900 */
+            --gray-100: #f1f5f9;
+            --gray-800: #1e293b;
+        }
+        
+        * { margin:0; padding:0; box-sizing:border-box; }
+        
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            line-height: 1.6;
+            color: #e2e8f0;
+            background-color: #0f172a;
+        }
+        
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
+        header {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            text-align: center;
+            padding: 120px 0 100px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,30 L100,100 L0,100 Z" fill="%23dc262640"/></svg>') no-repeat bottom;
+            background-size: cover;
+            opacity: 0.3;
+        }
+        
+        h1 {
+            font-size: 4rem;
+            font-weight: 900;
+            background: linear-gradient(to right, #dc2626, #f87171);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
+        }
+        
+        .tagline {
+            font-size: 1.6rem;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+        
+        .section { padding: 100px 0; }
+        .bg-dark { background: #0f172a; }
+        .bg-alt { background: #1e293b; }
+        
+        h2 {
+            font-size: 2.8rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #f8fafc;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+        
+        .card {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary);
+            box-shadow: 0 20px 40px rgba(220, 38, 38, 0.2);
+        }
+        
+        .card h3 {
+            color: var(--primary);
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-section {
+            text-align: center;
+            padding: 120px 0;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+            border-radius: 8px;
+            text-decoration: none;
+            margin: 1rem;
+            transition: all 0.3s;
+        }
+        
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
+        }
+        
+        .btn-outline {
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+        
+        .btn-outline:hover {
+            background: var(--primary);
+            color: white;
+        }
+        
+        footer {
+            background: #020617;
+            color: #94a3b8;
+            text-align: center;
+            padding: 3rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            h1 { font-size: 3rem; }
+            .tagline { font-size: 1.3rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>DJ Solutions LLC</h1>
+            <p class="tagline">Professional Bug Bounty Hunting & Ethical Hacking Services<br>We break your systems so attackers can't.</p>
+        </div>
+    </header>
+
+    <section class="section bg-alt">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="card">
+                    <h3>Bug Bounty Programs</h3>
+                    <p>Managed or on-demand bug bounty hunting on HackerOne, Bugcrowd, and private programs. Proven track record of finding critical vulnerabilities.</p>
+                </div>
+                <div class="card">
+                    <h3>Penetration Testing</h3>
+                    <p>Web, API, mobile, cloud, and infrastructure penetration testing with detailed reports and remediation guidance.</p>
+                </div>
+                <div class="card">
+                    <h3>Vulnerability Assessment</h3>
+                    <p>Comprehensive scanning and manual verification to uncover security weaknesses before they're exploited.</p>
+                </div>
+                <div class="card">
+                    <h3>Red Team Engagements</h3>
+                    <p>Real-world attack simulations targeting your crown jewels with zero trust and no rules of engagement limits.</p>
+                </div>
+                <div class="card">
+                    <h3>Security Consulting</h3>
+                    <p>Secure SDLC implementation, threat modeling, code reviews, and security training for your team.</p>
+                </div>
+                <div class="card">
+                    <h3>24/7 Incident Response</h3>
+                    <p>Rapid response retainer for when the worst happens — we’re already on your side when you get breached.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section cta-section bg-dark">
+        <div class="container">
+            <h2>Ready to Secure Your Assets?</h2>
+            <p style="font-size: 1.4rem; max-width: 800px; margin: 2rem auto;">
+                Hire a proven ethical hacker. Pay only for results or fixed-scope engagements.
+            </p>
+            
+            <!-- Replace YOUR_WAVE_USERNAME with your actual Wave username -->
+            <a href="https://invoice.waveapps.com/pay/YOUR_WAVE_USERNAME" target="_blank" class="btn btn-primary" style="background:#00c2a8;">
+                Pay Invoice (Wave)
+            </a>
+            
+            <a href="mailto:info@djsolutionsllc.net?subject=Bug%20Bounty%20/%20Pen%20Test%20Inquiry&body=Hi%20DJ%20Solutions%20team,%0A%0AI%27m%20interested%20in%20your%20ethical%20hacking%20services.%20Please%20contact%20me%20to%20discuss%20scope%20and%20pricing." 
+               class="btn btn-outline">
+                Email: info@djsolutionsllc.net
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 DJ Solutions LLC — Ethical Hacking & Bug Bounty Services</p>
+            <p style="margin-top: 1rem; font-size: 0.9rem;">
+                Authorized offensive security operations only • Responsible disclosure • No findings, no fee options available
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
