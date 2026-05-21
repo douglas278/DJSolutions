@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DJ Solutions LLC | Simple Websites for Local Colorado Businesses</title>
+    <title>DJ Solutions LLC | Simple HTML Websites for Colorado Businesses</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <style>
@@ -24,24 +24,6 @@
             background-position: center;
             background-attachment: fixed;
         }
-
-        .nav-link {
-            transition: all 0.3s ease;
-        }
-        
-        .nav-link:hover {
-            color: #60a5fa;
-            transform: translateY(-2px);
-        }
-
-        .service-card {
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        
-        .service-card:hover {
-            transform: translateY(-12px);
-            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.3), 0 8px 10px -6px rgb(0 0 0 / 0.3);
-        }
     </style>
 </head>
 <body class="bg-zinc-950 text-zinc-200">
@@ -50,7 +32,7 @@
     <nav class="bg-zinc-900 border-b border-zinc-800 sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
             <div class="flex items-center gap-3">
-                <div class="w-10 h-10 bg-blue-600 rounded-2xl flex items-center justify-center text-white font-bold text-2xl shadow-inner">DJ</div>
+                <div class="w-10 h-10 bg-blue-600 rounded-2xl flex items-center justify-center text-white font-bold text-2xl">DJ</div>
                 <div>
                     <span class="heading-font text-2xl font-semibold tracking-tighter">DJ Solutions</span>
                     <span class="text-xs text-zinc-500 block -mt-1">LLC • Colorado</span>
@@ -58,15 +40,14 @@
             </div>
             
             <div class="hidden md:flex items-center gap-8 text-sm font-medium">
-                <a href="#" class="nav-link">Home</a>
-                <a href="#services" class="nav-link">Services</a>
-                <a href="#portfolio" class="nav-link">Portfolio</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="#contact" class="nav-link">Contact</a>
+                <a href="#" class="hover:text-blue-400 transition">Home</a>
+                <a href="#services" class="hover:text-blue-400 transition">Services</a>
+                <a href="#portfolio" class="hover:text-blue-400 transition">Portfolio</a>
+                <a href="#about" class="hover:text-blue-400 transition">About</a>
+                <a href="#contact" class="hover:text-blue-400 transition">Contact</a>
             </div>
 
-            <a href="#contact" 
-               class="bg-blue-600 hover:bg-blue-500 text-white px-6 py-3 rounded-2xl font-semibold text-sm transition-all">
+            <a href="#contact" class="bg-blue-600 hover:bg-blue-500 text-white px-6 py-3 rounded-2xl font-semibold text-sm transition-all">
                 Get a Free Quote
             </a>
         </div>
@@ -76,20 +57,21 @@
     <header class="hero-bg h-screen flex items-center text-white">
         <div class="max-w-5xl mx-auto px-6 text-center">
             <h1 class="heading-font text-6xl md:text-7xl font-bold tracking-tighter leading-none mb-6">
-                Beautiful websites.<br>
-                <span class="text-sky-300">Built for Colorado businesses.</span>
+                Simple websites.<br>
+                <span class="text-sky-300">Built with HTML & JavaScript.</span>
             </h1>
             <p class="text-xl md:text-2xl text-zinc-100 max-w-2xl mx-auto mb-10">
-                We create and maintain simple, fast, mobile-friendly websites that help local Colorado businesses get more customers.
+                Clean, fast, and affordable websites for local Colorado businesses. 
+                No complicated platforms. Just pure HTML + JavaScript.
             </p>
             
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="#contact" class="bg-white text-zinc-900 hover:bg-zinc-100 px-10 py-4 rounded-3xl font-semibold text-lg inline-flex items-center justify-center gap-3 transition-all">
                     <i class="fa-solid fa-rocket"></i>
-                    Start Your Website Today
+                    Start Your Simple Website
                 </a>
                 <a href="#portfolio" class="border border-white/70 hover:bg-white/10 px-10 py-4 rounded-3xl font-semibold text-lg inline-flex items-center justify-center gap-3 transition-all">
-                    See Our Work
+                    See Examples
                 </a>
             </div>
         </div>
@@ -99,37 +81,38 @@
     <section id="services" class="py-24 bg-zinc-950">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-16">
-                <span class="px-4 py-2 bg-blue-900 text-blue-300 rounded-full text-sm font-medium">What We Do</span>
-                <h2 class="heading-font text-5xl font-semibold tracking-tighter mt-4">Simple. Effective. Done for you.</h2>
+                <span class="px-4 py-2 bg-blue-900 text-blue-300 rounded-full text-sm font-medium">What We Offer</span>
+                <h2 class="heading-font text-5xl font-semibold tracking-tighter mt-4">Simple. Fast. Reliable.</h2>
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="service-card bg-zinc-900 border border-zinc-800 rounded-3xl p-10">
+                <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-10 hover:border-blue-600 transition-all">
                     <div class="w-14 h-14 bg-blue-900 rounded-2xl flex items-center justify-center text-3xl mb-8">🌐</div>
-                    <h3 class="text-2xl font-semibold mb-3">Website Creation</h3>
-                    <p class="text-zinc-400 leading-relaxed">Modern, professional websites built in days — not weeks.</p>
+                    <h3 class="text-2xl font-semibold mb-3">Basic Website Creation</h3>
+                    <p class="text-zinc-400 leading-relaxed">
+                        Clean, professional single or multi-page websites using only HTML, CSS, and JavaScript.
+                    </p>
                     <ul class="mt-8 space-y-3 text-sm">
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-emerald-400"></i> Custom domain</li>
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-emerald-400"></i> Contact & booking forms</li>
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-emerald-400"></i> Google Business integration</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-emerald-400"></i> Mobile friendly</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-emerald-400"></i> Contact form</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-emerald-400"></i> Fast loading</li>
                     </ul>
                 </div>
 
-                <div class="service-card bg-zinc-900 border border-zinc-800 rounded-3xl p-10">
-                    <div class="w-14 h-14 bg-emerald-900 rounded-2xl flex items-center justify-center text-3xl mb-8">🔧</div>
-                    <h3 class="text-2xl font-semibold mb-3">Website Maintenance</h3>
-                    <p class="text-zinc-400 leading-relaxed">Monthly care plans starting at $89/mo.</p>
-                    <ul class="mt-8 space-y-3 text-sm">
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-emerald-400"></i> Updates & security</li>
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-emerald-400"></i> Content changes</li>
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-emerald-400"></i> Backups</li>
-                    </ul>
+                <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-10 hover:border-blue-600 transition-all">
+                    <div class="w-14 h-14 bg-emerald-900 rounded-2xl flex items-center justify-center text-3xl mb-8">✏️</div>
+                    <h3 class="text-2xl font-semibold mb-3">Easy Updates</h3>
+                    <p class="text-zinc-400 leading-relaxed">
+                        Need a change? Just send us the text or photos and we’ll update it quickly.
+                    </p>
                 </div>
 
-                <div class="service-card bg-zinc-900 border border-zinc-800 rounded-3xl p-10">
-                    <div class="w-14 h-14 bg-amber-900 rounded-2xl flex items-center justify-center text-3xl mb-8">📈</div>
-                    <h3 class="text-2xl font-semibold mb-3">Growth Add-ons</h3>
-                    <p class="text-zinc-400 leading-relaxed">Local SEO, photo galleries, booking tools & more.</p>
+                <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-10 hover:border-blue-600 transition-all">
+                    <div class="w-14 h-14 bg-amber-900 rounded-2xl flex items-center justify-center text-3xl mb-8">⚡</div>
+                    <h3 class="text-2xl font-semibold mb-3">Fast Delivery</h3>
+                    <p class="text-zinc-400 leading-relaxed">
+                        Most simple websites are completed in 3–7 days.
+                    </p>
                 </div>
             </div>
         </div>
@@ -139,14 +122,12 @@
     <section id="portfolio" class="py-24 bg-zinc-900">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-12">
-                <h2 class="heading-font text-5xl font-semibold tracking-tighter">Recent Colorado Websites</h2>
+                <h2 class="heading-font text-5xl font-semibold tracking-tighter">Recent Simple Websites</h2>
             </div>
-            <!-- Portfolio cards remain the same -->
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- (same as previous version) -->
                 <div class="group bg-zinc-800 rounded-3xl overflow-hidden">
                     <img src="https://picsum.photos/id/201/800/600" alt="Plumber" class="w-full h-64 object-cover group-hover:scale-105 transition-transform">
-                    <div class="p-8"><h4 class="font-semibold">Mike's Plumbing</h4><p class="text-sm text-zinc-400">Denver Metro</p></div>
+                    <div class="p-8"><h4 class="font-semibold">Mike's Plumbing</h4><p class="text-sm text-zinc-400">Denver</p></div>
                 </div>
                 <div class="group bg-zinc-800 rounded-3xl overflow-hidden">
                     <img src="https://picsum.photos/id/237/800/600" alt="Bakery" class="w-full h-64 object-cover group-hover:scale-105 transition-transform">
@@ -161,39 +142,13 @@
     </section>
 
     <!-- ABOUT -->
-    <section id="about" class="py-24 bg-zinc-950 border-t border-zinc-800">
-        <div class="max-w-4xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <span class="px-4 py-2 bg-blue-900 text-blue-300 rounded-full text-sm font-medium">Our Story</span>
-                <h2 class="heading-font text-5xl font-semibold tracking-tighter mt-4">Local. Reliable. Obsessed with simplicity.</h2>
-            </div>
-            
-            <div class="prose prose-zinc prose-invert max-w-none text-lg">
-                <p class="text-zinc-300 text-center leading-relaxed text-xl">
-                    DJ Solutions LLC was founded in Colorado with one goal: <strong>Help local small businesses look professional online</strong> without the high cost and complexity.
-                </p>
-                
-                <div class="grid md:grid-cols-2 gap-12 mt-16">
-                    <div>
-                        <h3 class="text-2xl font-semibold mb-4">Why Choose Us?</h3>
-                        <ul class="space-y-4 text-zinc-400">
-                            <li class="flex gap-3"><span class="text-blue-400">→</span> Fast turnaround (most sites live in 5–10 days)</li>
-                            <li class="flex gap-3"><span class="text-blue-400">→</span> No long-term contracts</li>
-                            <li class="flex gap-3"><span class="text-blue-400">→</span> Ongoing maintenance & support included</li>
-                            <li class="flex gap-3"><span class="text-blue-400">→</span> Colorado-based and proud of it</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3 class="text-2xl font-semibold mb-4">Who We Serve</h3>
-                        <p class="text-zinc-400">
-                            Plumbers, restaurants, salons, contractors, retail shops, real estate agents, and other local service businesses across Colorado.
-                        </p>
-                        <p class="mt-6 text-sm text-zinc-500">
-                            We believe every business deserves a great website — not just the big companies.
-                        </p>
-                    </div>
-                </div>
-            </div>
+    <section id="about" class="py-24 bg-zinc-950">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="heading-font text-5xl font-semibold tracking-tighter mb-6">Why Work With Us?</h2>
+            <p class="text-xl text-zinc-400 max-w-2xl mx-auto">
+                We keep it simple. No monthly fees, no complicated platforms, no bloat. 
+                Just clean, fast-loading websites built with basic HTML and JavaScript that you can easily own and update.
+            </p>
         </div>
     </section>
 
@@ -202,22 +157,22 @@
         <div class="max-w-4xl mx-auto px-6">
             <div class="grid md:grid-cols-5 gap-12">
                 <div class="md:col-span-2">
-                    <h2 class="heading-font text-5xl font-semibold tracking-tighter mb-6">Let's build something great together</h2>
-                    <p class="text-lg text-zinc-400">Tell us about your Colorado business and we’ll send you a custom proposal within 24 hours.</p>
+                    <h2 class="heading-font text-5xl font-semibold tracking-tighter mb-6">Ready for a simple website?</h2>
+                    <p class="text-lg text-zinc-400">Tell us about your business and we’ll send you a custom quote within 24 hours.</p>
                     
                     <div class="mt-12 space-y-6">
                         <div class="flex gap-4">
                             <i class="fa-solid fa-phone text-2xl text-blue-400 mt-1"></i>
                             <div>
                                 <div class="font-medium">(720) 310-8628</div>
-                                <div class="text-sm text-zinc-500">Call or text anytime</div>
+                                <div class="text-sm text-zinc-500">Call or text</div>
                             </div>
                         </div>
                         <div class="flex gap-4">
                             <i class="fa-solid fa-envelope text-2xl text-blue-400 mt-1"></i>
                             <div>
                                 <div class="font-medium">info@djsolutionsllc.net</div>
-                                <div class="text-sm text-zinc-500">Fast replies guaranteed</div>
+                                <div class="text-sm text-zinc-500">We reply fast</div>
                             </div>
                         </div>
                     </div>
@@ -240,11 +195,11 @@
                             </div>
                         </div>
                         <div>
-                            <label class="block text-sm font-medium mb-2">What kind of business do you have?</label>
-                            <textarea class="w-full bg-zinc-900 border border-zinc-700 rounded-3xl px-5 py-4 h-32 focus:outline-none focus:border-blue-500 text-white" placeholder="Example: Plumbing, Bakery, Hair Salon..."></textarea>
+                            <label class="block text-sm font-medium mb-2">Tell us about your business</label>
+                            <textarea class="w-full bg-zinc-900 border border-zinc-700 rounded-3xl px-5 py-4 h-32 focus:outline-none focus:border-blue-500 text-white" placeholder="Example: We are a plumbing company in Denver..."></textarea>
                         </div>
                         <button type="submit" class="w-full bg-blue-600 hover:bg-blue-500 text-white py-5 rounded-3xl font-semibold text-lg transition-all">
-                            Send Message – Get Proposal
+                            Get My Free Quote
                         </button>
                     </form>
                 </div>
@@ -253,24 +208,16 @@
     </section>
 
     <!-- FOOTER -->
-    <footer class="bg-black text-zinc-500 py-16">
-        <div class="max-w-7xl mx-auto px-6 text-center md:text-left">
-            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
-                <div class="flex items-center gap-3">
-                    <div class="w-9 h-9 bg-blue-600 rounded-2xl flex items-center justify-center text-white font-bold">DJ</div>
-                    <div class="heading-font text-2xl font-semibold text-white">DJ Solutions LLC</div>
-                </div>
-                <div class="text-sm">
-                    © 2026 DJ Solutions LLC • Proudly serving Colorado businesses
-                </div>
-            </div>
+    <footer class="bg-black text-zinc-500 py-12">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            © 2026 DJ Solutions LLC • Simple Websites for Colorado Businesses
         </div>
     </footer>
 
     <script>
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            alert("Thank you! We'll get back to you within 24 hours.");
+            alert("Thank you! We'll get back to you within 24 hours with a quote.");
         });
     </script>
 </body>
