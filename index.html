@@ -9,13 +9,8 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
         
-        body {
-            font-family: 'Inter', system-ui, sans-serif;
-        }
-        
-        .heading-font {
-            font-family: 'Space Grotesk', sans-serif;
-        }
+        body { font-family: 'Inter', system-ui, sans-serif; }
+        .heading-font { font-family: 'Space Grotesk', sans-serif; }
 
         .hero-bg {
             background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(15, 23, 42, 0.85)), 
@@ -61,7 +56,7 @@
                 <span class="text-sky-300">Built for local Colorado businesses.</span>
             </h1>
             <p class="text-xl md:text-2xl text-zinc-100 max-w-2xl mx-auto mb-10">
-                Clean, fast, and professional websites that are easy to use and built to help you get more customers.
+                Clean, fast, and professional websites that help you attract more local customers.
             </p>
             
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
@@ -89,20 +84,15 @@
                     <div class="w-14 h-14 bg-blue-900 rounded-2xl flex items-center justify-center text-3xl mb-8">🌐</div>
                     <h3 class="text-2xl font-semibold mb-3">Simple Website Creation</h3>
                     <p class="text-zinc-400 leading-relaxed">
-                        Clean, modern websites designed specifically for local businesses. Easy to navigate and built to look great on phones and computers.
+                        Clean, modern websites designed specifically for local businesses. Easy to navigate on phones and computers.
                     </p>
-                    <ul class="mt-8 space-y-3 text-sm">
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-emerald-400"></i> Fully mobile friendly</li>
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-emerald-400"></i> Contact form included</li>
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-emerald-400"></i> Fast loading speed</li>
-                    </ul>
                 </div>
 
                 <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-10 hover:border-blue-600 transition-all">
                     <div class="w-14 h-14 bg-emerald-900 rounded-2xl flex items-center justify-center text-3xl mb-8">✏️</div>
                     <h3 class="text-2xl font-semibold mb-3">Easy Updates</h3>
                     <p class="text-zinc-400 leading-relaxed">
-                        Need to change text, add new photos, or update information? Just let us know and we’ll make the changes for you.
+                        Need changes? Just tell us what you want updated and we’ll handle it.
                     </p>
                 </div>
 
@@ -110,7 +100,7 @@
                     <div class="w-14 h-14 bg-amber-900 rounded-2xl flex items-center justify-center text-3xl mb-8">⚡</div>
                     <h3 class="text-2xl font-semibold mb-3">Fast Delivery</h3>
                     <p class="text-zinc-400 leading-relaxed">
-                        Most websites are completed and ready in 3–7 days.
+                        Most websites are completed in 3–7 days.
                     </p>
                 </div>
             </div>
@@ -145,62 +135,31 @@
         <div class="max-w-4xl mx-auto px-6 text-center">
             <h2 class="heading-font text-5xl font-semibold tracking-tighter mb-6">Keeping It Simple</h2>
             <p class="text-xl text-zinc-400 max-w-2xl mx-auto">
-                We create straightforward, professional websites without the unnecessary complexity. 
-                No confusing subscriptions or complicated systems — just a clean, reliable website that works great and that we maintain for you.
+                We build straightforward, good-looking websites without unnecessary complexity. 
+                Just clean, reliable sites that we maintain for you.
             </p>
         </div>
     </section>
 
     <!-- CONTACT -->
     <section id="contact" class="py-24 bg-zinc-900">
-        <div class="max-w-4xl mx-auto px-6">
-            <div class="grid md:grid-cols-5 gap-12">
-                <div class="md:col-span-2">
-                    <h2 class="heading-font text-5xl font-semibold tracking-tighter mb-6">Ready for a simple website?</h2>
-                    <p class="text-lg text-zinc-400">Tell us about your business and we’ll send you a custom quote within 24 hours.</p>
-                    
-                    <div class="mt-12 space-y-6">
-                        <div class="flex gap-4">
-                            <i class="fa-solid fa-phone text-2xl text-blue-400 mt-1"></i>
-                            <div>
-                                <div class="font-medium">(720) 310-8628</div>
-                                <div class="text-sm text-zinc-500">Call or text</div>
-                            </div>
-                        </div>
-                        <div class="flex gap-4">
-                            <i class="fa-solid fa-envelope text-2xl text-blue-400 mt-1"></i>
-                            <div>
-                                <div class="font-medium">info@djsolutionsllc.net</div>
-                                <div class="text-sm text-zinc-500">We reply fast</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="heading-font text-5xl font-semibold tracking-tighter mb-6">Ready for a simple website?</h2>
+            <p class="text-lg text-zinc-400 mb-10">Tell us about your business and we’ll send you a custom quote within 24 hours.</p>
+            
+            <a href="mailto:info@djsolutionsllc.net" 
+               class="inline-flex items-center gap-4 bg-blue-600 hover:bg-blue-500 text-white px-10 py-6 rounded-3xl text-2xl font-semibold transition-all">
+                <i class="fa-solid fa-envelope text-3xl"></i>
+                Email Us: info@djsolutionsllc.net
+            </a>
 
-                <div class="md:col-span-3 bg-zinc-950 border border-zinc-800 rounded-3xl p-10">
-                    <form id="contactForm" class="space-y-8">
-                        <div>
-                            <label class="block text-sm font-medium mb-2">Business Name</label>
-                            <input type="text" class="w-full bg-zinc-900 border border-zinc-700 rounded-2xl px-5 py-4 focus:outline-none focus:border-blue-500 text-white" placeholder="Your Business Name">
-                        </div>
-                        <div class="grid grid-cols-2 gap-6">
-                            <div>
-                                <label class="block text-sm font-medium mb-2">Your Name</label>
-                                <input type="text" class="w-full bg-zinc-900 border border-zinc-700 rounded-2xl px-5 py-4 focus:outline-none focus:border-blue-500 text-white" placeholder="John Smith">
-                            </div>
-                            <div>
-                                <label class="block text-sm font-medium mb-2">Phone</label>
-                                <input type="tel" class="w-full bg-zinc-900 border border-zinc-700 rounded-2xl px-5 py-4 focus:outline-none focus:border-blue-500 text-white" placeholder="(720) 310-8628">
-                            </div>
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium mb-2">Tell us about your business</label>
-                            <textarea class="w-full bg-zinc-900 border border-zinc-700 rounded-3xl px-5 py-4 h-32 focus:outline-none focus:border-blue-500 text-white" placeholder="Example: We are a plumbing company in Denver..."></textarea>
-                        </div>
-                        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-500 text-white py-5 rounded-3xl font-semibold text-lg transition-all">
-                            Get My Free Quote
-                        </button>
-                    </form>
+            <div class="mt-12 flex justify-center gap-12 text-sm">
+                <div class="flex items-center gap-3">
+                    <i class="fa-solid fa-phone text-blue-400"></i>
+                    <div>
+                        <div class="font-medium">(720) 310-8628</div>
+                        <div class="text-zinc-500">Call or text</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -213,11 +172,5 @@
         </div>
     </footer>
 
-    <script>
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert("Thank you! We'll get back to you within 24 hours with a quote.");
-        });
-    </script>
 </body>
 </html>
