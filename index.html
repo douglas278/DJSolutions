@@ -19,26 +19,11 @@
             background-position: center;
         }
 
-        .portfolio-card {
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-        }
-
         .portfolio-img {
             height: 240px;
             object-fit: contain;
             background: #18181b;
             padding: 20px;
-            flex-shrink: 0;
-        }
-
-        .portfolio-content {
-            flex-grow: 1;
-            padding: 1.5rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
         }
     </style>
 </head>
@@ -133,16 +118,15 @@
                 </button>
 
                 <div id="portfolioScroll" class="flex gap-6 overflow-x-auto pb-8 snap-x snap-mandatory scroll-smooth">
-                    <!-- Your Project -->
                     <div class="group bg-zinc-800 rounded-3xl overflow-hidden min-w-[340px] flex-shrink-0 snap-start flex flex-col">
-                        <a href="https://www.johnsontileandremodel.com/" target="_blank" class="block">
+                        <a href="https://www.johnsontileandremodel.com/" target="_blank">
                             <img src="https://i.ibb.co/KdyvLvP/JTR-LOGO-cropped.jpg" 
                                  alt="Johnson Tile & Remodel" 
-                                 class="portfolio-img w-full flex-shrink-0">
+                                 class="portfolio-img w-full">
                         </a>
-                        <div class="portfolio-content p-8 text-center flex-1 flex flex-col justify-center">
-                            <h4 class="font-semibold text-lg">Johnson Tile & Remodel</h4>
-                            <p class="text-sm text-zinc-400 mt-1">Tile Installation & Remodeling</p>
+                        <div class="p-8 text-center">
+                            <h4 class="font-semibold">Johnson Tile & Remodel</h4>
+                            <p class="text-sm text-zinc-400">Tile Installation & Remodeling</p>
                         </div>
                     </div>
                 </div>
@@ -150,6 +134,49 @@
                 <button id="scrollRight" class="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-black/70 hover:bg-black/90 text-white p-4 rounded-full transition-all">
                     <i class="fa-solid fa-chevron-right text-2xl"></i>
                 </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="py-24 bg-zinc-950">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <span class="px-4 py-2 bg-blue-900 text-blue-300 rounded-full text-sm font-medium">Our Approach</span>
+                <h2 class="heading-font text-5xl font-semibold tracking-tighter mt-4">We keep things simple</h2>
+            </div>
+            <div class="max-w-3xl mx-auto text-center text-lg text-zinc-400">
+                <p>
+                    I build straightforward, good-looking websites for local Colorado businesses. 
+                    One-time build fee + a simple $50/month plan that covers your domain, hosting, SSL, and limited monthly updates.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-24 bg-zinc-900">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="heading-font text-5xl font-semibold tracking-tighter mb-6">Ready to get started?</h2>
+            <p class="text-xl text-zinc-400 mb-12 max-w-xl mx-auto">
+                Reach out and we’ll schedule a quick conversation to understand what you need. 
+                We’ll discuss your goals first, then provide a clear one-time build price + our $50/month plan.
+            </p>
+            
+            <a href="mailto:info@djsolutionsllc.net" 
+               class="inline-flex items-center gap-4 bg-blue-600 hover:bg-blue-500 text-white px-12 py-7 rounded-3xl text-2xl font-semibold transition-all mb-10">
+                <i class="fa-solid fa-envelope text-3xl"></i>
+                Email Us Now
+            </a>
+
+            <div class="flex justify-center gap-12 text-sm">
+                <div class="flex items-center gap-3">
+                    <i class="fa-solid fa-phone text-blue-400"></i>
+                    <div>
+                        <div class="font-medium">(720) 310-8628</div>
+                        <div class="text-zinc-500">Call or text anytime</div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -162,12 +189,16 @@
     </footer>
 
     <script>
-        const scrollContainer = document.getElementById('portfolioScroll');
-        const leftBtn = document.getElementById('scrollLeft');
-        const rightBtn = document.getElementById('scrollRight');
-
-        leftBtn.addEventListener('click', () => scrollContainer.scrollBy({ left: -360, behavior: 'smooth' }));
-        rightBtn.addEventListener('click', () => scrollContainer.scrollBy({ left: 360, behavior: 'smooth' }));
+        // Smooth scrolling for navbar links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if (this.getAttribute('href') !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
     </script>
 </body>
 </html>
