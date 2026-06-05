@@ -17,15 +17,28 @@
                         url('https://images.unsplash.com/photo-1540979388789-6cee28a1cdc9?q=80&w=2070');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed;
         }
 
-        .portfolio-container {
-            scrollbar-width: none; /* Hide default scrollbar */
+        .portfolio-card {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
         }
-        
-        .portfolio-container::-webkit-scrollbar {
-            display: none;
+
+        .portfolio-img {
+            height: 240px;
+            object-fit: contain;
+            background: #18181b;
+            padding: 20px;
+            flex-shrink: 0;
+        }
+
+        .portfolio-content {
+            flex-grow: 1;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
     </style>
 </head>
@@ -35,11 +48,9 @@
     <nav class="bg-zinc-900 border-b border-zinc-800 sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
             <div class="flex items-center gap-3">
-                <div class="w-10 h-10 bg-blue-600 rounded-2xl flex items-center justify-center text-white font-bold text-2xl">DJ</div>
-                <div>
-                    <span class="heading-font text-2xl font-semibold tracking-tighter">DJ Solutions</span>
-                    <span class="text-xs text-zinc-500 block -mt-1">LLC • Colorado</span>
-                </div>
+                <img src="https://i.ibb.co/bR6T7sXD/image-5.png" 
+                     alt="DJ Solutions LLC" 
+                     class="h-20 w-auto">
             </div>
             
             <div class="hidden md:flex items-center gap-8 text-sm font-medium">
@@ -64,7 +75,7 @@
                 <span class="text-sky-300">Built for local Colorado businesses.</span>
             </h1>
             <p class="text-xl md:text-2xl text-zinc-100 max-w-2xl mx-auto mb-10">
-                Clean, fast, and professional websites that help you attract more local customers.
+                Clean, fast, and professional websites that clearly show off your work and make it easy for customers to find your contact information.
             </p>
             
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
@@ -84,38 +95,32 @@
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-16">
                 <span class="px-4 py-2 bg-blue-900 text-blue-300 rounded-full text-sm font-medium">What We Offer</span>
-                <h2 class="heading-font text-5xl font-semibold tracking-tighter mt-4">Simple. Fast. Professional.</h2>
+                <h2 class="heading-font text-5xl font-semibold tracking-tighter mt-4">Simple. Transparent. Predictable.</h2>
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-10 hover:border-blue-600 transition-all">
                     <div class="w-14 h-14 bg-blue-900 rounded-2xl flex items-center justify-center text-3xl mb-8">🌐</div>
                     <h3 class="text-2xl font-semibold mb-3">Simple Website Creation</h3>
-                    <p class="text-zinc-400 leading-relaxed">
-                        Clean, modern websites designed specifically for local businesses.
-                    </p>
+                    <p class="text-zinc-400 leading-relaxed">One-time build fee for a clean, professional website.</p>
                 </div>
 
                 <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-10 hover:border-blue-600 transition-all">
-                    <div class="w-14 h-14 bg-emerald-900 rounded-2xl flex items-center justify-center text-3xl mb-8">✏️</div>
-                    <h3 class="text-2xl font-semibold mb-3">Easy Updates</h3>
-                    <p class="text-zinc-400 leading-relaxed">
-                        Need changes? Just tell us what you want updated and we’ll handle it.
-                    </p>
+                    <div class="w-14 h-14 bg-emerald-900 rounded-2xl flex items-center justify-center text-3xl mb-8">🔄</div>
+                    <h3 class="text-2xl font-semibold mb-3">Monthly Care Plan</h3>
+                    <p class="text-zinc-400 leading-relaxed"><strong>$50 per month</strong> — domain, hosting, SSL & limited updates.</p>
                 </div>
 
                 <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-10 hover:border-blue-600 transition-all">
                     <div class="w-14 h-14 bg-amber-900 rounded-2xl flex items-center justify-center text-3xl mb-8">⚡</div>
                     <h3 class="text-2xl font-semibold mb-3">Fast Delivery</h3>
-                    <p class="text-zinc-400 leading-relaxed">
-                        Most websites are completed in 3–7 days.
-                    </p>
+                    <p class="text-zinc-400 leading-relaxed">Most websites completed in 3–7 days.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- PORTFOLIO - Horizontal Scroll with Arrows -->
+    <!-- PORTFOLIO -->
     <section id="portfolio" class="py-24 bg-zinc-900 relative">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-12">
@@ -123,120 +128,28 @@
             </div>
             
             <div class="relative">
-                <!-- Left Arrow -->
-                <button id="scrollLeft" 
-                        class="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-black/60 hover:bg-black/80 text-white p-4 rounded-full transition-all backdrop-blur-md">
+                <button id="scrollLeft" class="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-black/70 hover:bg-black/90 text-white p-4 rounded-full transition-all">
                     <i class="fa-solid fa-chevron-left text-2xl"></i>
                 </button>
 
-                <!-- Scroll Container -->
-                <div id="portfolioScroll" 
-                     class="portfolio-container flex gap-6 overflow-x-auto pb-8 snap-x snap-mandatory scroll-smooth">
-                    <div class="group bg-zinc-800 rounded-3xl overflow-hidden min-w-[320px] flex-shrink-0 snap-start">
-                        <img src="https://picsum.photos/id/201/800/600" alt="Plumber" class="w-full h-64 object-cover group-hover:scale-105 transition-transform">
-                        <div class="p-8">
-                            <h4 class="font-semibold">Mike's Plumbing</h4>
-                            <p class="text-sm text-zinc-400">Denver</p>
-                        </div>
-                    </div>
-
-                    <div class="group bg-zinc-800 rounded-3xl overflow-hidden min-w-[320px] flex-shrink-0 snap-start">
-                        <img src="https://picsum.photos/id/237/800/600" alt="Bakery" class="w-full h-64 object-cover group-hover:scale-105 transition-transform">
-                        <div class="p-8">
-                            <h4 class="font-semibold">Sweet Crumbs Bakery</h4>
-                            <p class="text-sm text-zinc-400">Boulder</p>
-                        </div>
-                    </div>
-
-                    <div class="group bg-zinc-800 rounded-3xl overflow-hidden min-w-[320px] flex-shrink-0 snap-start">
-                        <img src="https://picsum.photos/id/866/800/600" alt="Auto Repair" class="w-full h-64 object-cover group-hover:scale-105 transition-transform">
-                        <div class="p-8">
-                            <h4 class="font-semibold">Reliable Auto Repair</h4>
-                            <p class="text-sm text-zinc-400">Colorado Springs</p>
-                        </div>
-                    </div>
-
-                    <div class="group bg-zinc-800 rounded-3xl overflow-hidden min-w-[320px] flex-shrink-0 snap-start">
-                        <img src="https://picsum.photos/id/1015/800/600" alt="Hair Salon" class="w-full h-64 object-cover group-hover:scale-105 transition-transform">
-                        <div class="p-8">
-                            <h4 class="font-semibold">Mountain View Salon</h4>
-                            <p class="text-sm text-zinc-400">Aspen</p>
-                        </div>
-                    </div>
-
-                    <div class="group bg-zinc-800 rounded-3xl overflow-hidden min-w-[320px] flex-shrink-0 snap-start">
-                        <img src="https://picsum.photos/id/133/800/600" alt="Coffee Shop" class="w-full h-64 object-cover group-hover:scale-105 transition-transform">
-                        <div class="p-8">
-                            <h4 class="font-semibold">Summit Coffee</h4>
-                            <p class="text-sm text-zinc-400">Vail</p>
-                        </div>
-                    </div>
-
-                    <div class="group bg-zinc-800 rounded-3xl overflow-hidden min-w-[320px] flex-shrink-0 snap-start">
-                        <img src="https://picsum.photos/id/251/800/600" alt="Landscaping" class="w-full h-64 object-cover group-hover:scale-105 transition-transform">
-                        <div class="p-8">
-                            <h4 class="font-semibold">Green Thumb Landscaping</h4>
-                            <p class="text-sm text-zinc-400">Fort Collins</p>
-                        </div>
-                    </div>
-
-                    <div class="group bg-zinc-800 rounded-3xl overflow-hidden min-w-[320px] flex-shrink-0 snap-start">
-                        <img src="https://picsum.photos/id/870/800/600" alt="Gym" class="w-full h-64 object-cover group-hover:scale-105 transition-transform">
-                        <div class="p-8">
-                            <h4 class="font-semibold">Peak Performance Gym</h4>
-                            <p class="text-sm text-zinc-400">Lakewood</p>
+                <div id="portfolioScroll" class="flex gap-6 overflow-x-auto pb-8 snap-x snap-mandatory scroll-smooth">
+                    <!-- Your Project -->
+                    <div class="group bg-zinc-800 rounded-3xl overflow-hidden min-w-[340px] flex-shrink-0 snap-start flex flex-col">
+                        <a href="https://www.johnsontileandremodel.com/" target="_blank" class="block">
+                            <img src="https://i.ibb.co/KdyvLvP/JTR-LOGO-cropped.jpg" 
+                                 alt="Johnson Tile & Remodel" 
+                                 class="portfolio-img w-full flex-shrink-0">
+                        </a>
+                        <div class="portfolio-content p-8 text-center flex-1 flex flex-col justify-center">
+                            <h4 class="font-semibold text-lg">Johnson Tile & Remodel</h4>
+                            <p class="text-sm text-zinc-400 mt-1">Tile Installation & Remodeling</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Right Arrow -->
-                <button id="scrollRight" 
-                        class="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-black/60 hover:bg-black/80 text-white p-4 rounded-full transition-all backdrop-blur-md">
+                <button id="scrollRight" class="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-black/70 hover:bg-black/90 text-white p-4 rounded-full transition-all">
                     <i class="fa-solid fa-chevron-right text-2xl"></i>
                 </button>
-            </div>
-        </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about" class="py-24 bg-zinc-950">
-        <div class="max-w-4xl mx-auto px-6">
-            <div class="text-center mb-12">
-                <span class="px-4 py-2 bg-blue-900 text-blue-300 rounded-full text-sm font-medium">Our Approach</span>
-                <h2 class="heading-font text-5xl font-semibold tracking-tighter mt-4">We keep things simple</h2>
-            </div>
-            <div class="max-w-3xl mx-auto text-center text-lg text-zinc-400">
-                <p>
-                    At DJ Solutions LLC, we focus exclusively on building simple, effective websites for local Colorado businesses. 
-                    No complicated platforms — just clean, professional websites that look great and help bring you more customers.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="py-24 bg-zinc-900 border-t border-zinc-800">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <h2 class="heading-font text-5xl font-semibold tracking-tighter mb-6">Ready to get started?</h2>
-            <p class="text-xl text-zinc-400 mb-12 max-w-xl mx-auto">
-                Reach out and we’ll schedule a quick conversation to understand what you need. 
-                We’ll discuss your goals first, then provide a custom price based on the scope of work.
-            </p>
-            
-            <a href="mailto:info@djsolutionsllc.net" 
-               class="inline-flex items-center gap-4 bg-blue-600 hover:bg-blue-500 text-white px-12 py-7 rounded-3xl text-2xl font-semibold transition-all mb-10">
-                <i class="fa-solid fa-envelope text-3xl"></i>
-                Email Us Now
-            </a>
-
-            <div class="flex justify-center gap-12 text-sm">
-                <div class="flex items-center gap-3">
-                    <i class="fa-solid fa-phone text-blue-400"></i>
-                    <div>
-                        <div class="font-medium">(720) 310-8628</div>
-                        <div class="text-zinc-500">Call or text anytime</div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -250,28 +163,11 @@
 
     <script>
         const scrollContainer = document.getElementById('portfolioScroll');
-        const scrollLeftBtn = document.getElementById('scrollLeft');
-        const scrollRightBtn = document.getElementById('scrollRight');
+        const leftBtn = document.getElementById('scrollLeft');
+        const rightBtn = document.getElementById('scrollRight');
 
-        const scrollAmount = 340; // Approximate card width + gap
-
-        scrollLeftBtn.addEventListener('click', () => {
-            scrollContainer.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-        });
-
-        scrollRightBtn.addEventListener('click', () => {
-            scrollContainer.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-        });
-
-        // Optional: Hide arrows at ends
-        function updateArrows() {
-            scrollLeftBtn.style.opacity = scrollContainer.scrollLeft > 50 ? '1' : '0.4';
-            scrollRightBtn.style.opacity = 
-                (scrollContainer.scrollLeft + scrollContainer.clientWidth < scrollContainer.scrollWidth - 50) ? '1' : '0.4';
-        }
-
-        scrollContainer.addEventListener('scroll', updateArrows);
-        window.addEventListener('resize', updateArrows);
+        leftBtn.addEventListener('click', () => scrollContainer.scrollBy({ left: -360, behavior: 'smooth' }));
+        rightBtn.addEventListener('click', () => scrollContainer.scrollBy({ left: 360, behavior: 'smooth' }));
     </script>
 </body>
 </html>
